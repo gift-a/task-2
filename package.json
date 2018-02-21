@@ -1,0 +1,36 @@
+{
+  "name": "task-2",
+  "version": "1.0.0",
+  "description": "JS+Webpack",
+  "main": "/dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gift-a/task-2.git"
+  },
+  "author": "gift-a",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gift-a/task-2/issues"
+  },
+  "homepage": "https://github.com/gift-a/task-2#readme",
+  "lint-staged": {
+    "*.{js,css,scss}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.html": [
+      "js-beautify -s 2 -r --html",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "js-beautify": "^1.7.5",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2"
+  }
+}
